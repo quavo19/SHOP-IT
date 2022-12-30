@@ -31,9 +31,9 @@ module.exports = {
             options: {
               name: '[name].[ext]',
               outputPath: 'img/',
-              publicPath: 'img/'
-            }
-          }
+              publicPath: 'img/',
+            },
+          },
         ],
       },
     ],
