@@ -11,7 +11,6 @@ module.exports = {
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
   },
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })],
   module: {
@@ -25,7 +24,7 @@ module.exports = {
         use: ['html-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(jpg|png|jpeg|webp)$/,
         use: [
           {
             loader: 'file-loader',
@@ -33,8 +32,6 @@ module.exports = {
               name: '[name].[ext]',
               outputPath: 'img/',
               publicPath: 'img/',
-              emitFile: true,
-              esModule: false,
             },
           },
         ],
