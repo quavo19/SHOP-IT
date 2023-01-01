@@ -1,3 +1,6 @@
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
+import smallSlide from './small-slider.js';
+
 const homePage = () => {
   const home = `
 <div class="text-box">
@@ -18,6 +21,7 @@ const homePage = () => {
 
   homeContent.addEventListener('click', () => {
     homeUI.innerHTML = home;
+    smallSlide();
   });
 };
 
