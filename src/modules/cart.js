@@ -33,7 +33,7 @@ const cartBox = () => {
       color: ['#3b81ba', 'blue'],
     },
     {
-      id: 0,
+      id: 4,
       image: 'img/13pm.png',
       title: 'IPone 13 pro max',
       price: 120,
@@ -41,7 +41,7 @@ const cartBox = () => {
       color: ['#82aed2', 'Ash'],
     },
     {
-      id: 1,
+      id: 5,
       image: 'img/13.png',
       title: 'IPone 13 pro max',
       price: 150,
@@ -49,7 +49,7 @@ const cartBox = () => {
       color: ['#e7dfdf', 'gray'],
     },
     {
-      id: 2,
+      id: 6,
       image: 'img/15.jpg',
       title: 'IPone 13 pro max',
       price: 200,
@@ -57,7 +57,7 @@ const cartBox = () => {
       color: ['#366431', 'green'],
     },
     {
-      id: 3,
+      id: 7,
       image: 'img/ipone13.png',
       title: 'IPone 13 pro max',
       price: 500,
