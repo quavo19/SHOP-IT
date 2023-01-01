@@ -3,6 +3,13 @@ import './style.css';
 import signup from './modules/signup.js';
 // eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
 import loginPage from './modules/login.js';
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
+import Eye from './modules/pasword.js';
+// eslint-disable-next-line import/no-named-as-default, import/no-named-as-default-member
+import homePage from './modules/home.js';
+import cartBox from './modules/cart.js';
+
+homePage();
 
 const slideimg1 = '<img src="img/13.png" alt="popUp-Item">';
 const slideimg2 = '<img src="img/ipone13.png" alt="popUp-Item">';
@@ -17,9 +24,11 @@ const UI = document.querySelector('.content');
 
 Account.addEventListener('click', () => {
   UI.innerHTML = loginPage;
+  Eye();
   const signupbtn = document.querySelector('.login-title p');
   signupbtn.addEventListener('click', () => {
     UI.innerHTML = signup;
+    Eye();
   });
 });
 imageContent1.addEventListener('click', () => {
@@ -35,17 +44,4 @@ imageContent3.addEventListener('click', () => {
   sec.style.background = '#0062be';
 });
 
-// let state = false;
-// const eye = document.querySelector('.eye');
-// const eyeid = document.querySelector('#eye');
-// eye.addEventListener('click', () => {
-//   if (state) {
-//     document.getElementById('password').setAttribute('type', 'password');
-//     state = false;
-//     eyeid.style.color = '#7a797e';
-//   } else {
-//     document.getElementById('password').setAttribute('type', 'text');
-//     state = true;
-//     eyeid.style.color = '#5887ef';
-//   }
-// });
+cartBox();
