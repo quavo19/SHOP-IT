@@ -4,71 +4,79 @@ const cartBox = () => {
       id: 0,
       image: 'img/13pm.png',
       title: 'IPone 13 pro max',
-      price: 120,
+      price: 8520,
       space: 256,
       color: ['#82aed2', 'Ash'],
+      comment: 'no faults, everything works fine',
     },
     {
       id: 1,
       image: 'img/13.png',
       title: 'IPone 13 pro max',
-      price: 150,
+      price: 8050,
       space: 512,
       color: ['#e7dfdf', 'gray'],
+      comment: 'no faults, everything works fine',
     },
     {
       id: 2,
       image: 'img/15.jpg',
       title: 'IPone 13 pro max',
-      price: 200,
+      price: 5000,
       space: 64,
       color: ['#366431', 'green'],
+      comment: 'no faults, everything works fine',
     },
     {
       id: 3,
       image: 'img/ipone13.png',
       title: 'IPone 13 pro max',
-      price: 500,
+      price: 6000,
       space: 128,
       color: ['#3b81ba', 'blue'],
+      comment: 'no faults, everything works fine',
     },
     {
       id: 4,
-      image: 'img/13pm.png',
-      title: 'IPone 13 pro max',
-      price: 120,
+      image: 'img/14pro.webp',
+      title: 'IPhone pro',
+      price: 5720,
       space: 256,
       color: ['#82aed2', 'Ash'],
+      comment: 'no faults, everything works fine',
     },
     {
       id: 5,
-      image: 'img/13.png',
-      title: 'IPone 13 pro max',
-      price: 150,
-      space: 512,
-      color: ['#e7dfdf', 'gray'],
+      image: 'img/i11-yelow.jpeg',
+      title: 'IPhone 11',
+      price: 3050,
+      space: 128,
+      color: ['#f5e963', 'Yellow'],
+      comment: 'no faults, everything works fine',
     },
     {
       id: 6,
-      image: 'img/15.jpg',
-      title: 'IPone 13 pro max',
-      price: 200,
+      image: 'img/i11-white.jpeg',
+      title: 'iPhone 11',
+      price: 2800,
       space: 64,
-      color: ['#366431', 'green'],
+      color: ['#000', 'White'],
+      comment: 'no faults, everything works fine',
     },
     {
       id: 7,
-      image: 'img/ipone13.png',
-      title: 'IPone 13 pro max',
-      price: 500,
-      space: 128,
-      color: ['#3b81ba', 'blue'],
+      image: 'img/iphonex-white.png',
+      title: 'iPhone x',
+      price: 1500,
+      space: 64,
+      color: ['#000', 'white'],
+      comment: 'no faults, everything works fine',
     },
   ];
   const categories = [...new Set(product.map((item) => item))];
   document.querySelector('.root').innerHTML = categories.map((item) => {
     const {
-      image, title, price, id, color, space,
+      image, title, price, id, color, space, comment,
     } = item;
     return (
       `<div class = 'box'>
@@ -79,7 +87,7 @@ const cartBox = () => {
         <div class="description-cart">
             <div>
                 <h5>${title}</h5>
-                <p>${space}Gib <br> no faults, everything works fine</p>
+                <p>${space}Gib <br> ${comment}</p>
             </div>
             <div class = "color-price">
                 <p style="background:${color[0]}">${color[1]}</p>
