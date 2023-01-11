@@ -7,6 +7,11 @@
   font-family: Poppins, sans-serif;
 }
 
+h2 {
+  font-size: 20px;
+  color: #0d2f4f;
+}
+
 .first-sec {
   position: relative;
   width: 100%;
@@ -101,6 +106,16 @@
   font-size: 20px;
 }
 
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #0062be;
+  margin: 10px 10px;
+}
+
 .my-account .cart-item {
   background: red;
   font-size: 12px;
@@ -191,6 +206,11 @@
   color: #93b4d3;
 }
 
+.login-title p {
+  font-style: italic;
+  text-decoration: underline;
+}
+
 .content .text-box p {
   color: #fff;
 }
@@ -274,11 +294,6 @@
   color: #fff;
   display: flex;
   justify-content: space-between;
-}
-
-.login-title p {
-  font-style: italic;
-  text-decoration: underline;
 }
 
 .form {
@@ -510,11 +525,6 @@
   justify-content: space-between;
 }
 
-h2 {
-  font-size: 20px;
-  color: #0d2f4f;
-}
-
 .cart-button {
   position: relative;
   border: none;
@@ -530,16 +540,6 @@ h2 {
 }
 
 /* cart items */
-.cart-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  background-color: 1px solid #0062be;
-  border-radius: 3px;
-  border-bottom: 2px solid #0062be;
-  margin: 10px 10px;
-}
 
 .rowing,
 .row-img {
