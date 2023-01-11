@@ -7,6 +7,11 @@
   font-family: Poppins, sans-serif;
 }
 
+h2 {
+  font-size: 20px;
+  color: #0d2f4f;
+}
+
 .first-sec {
   position: relative;
   width: 100%;
@@ -17,6 +22,10 @@
   align-items: center;
   background-color: #0062be;
   transition: 0.5s;
+}
+
+.item_user a {
+  text-decoration: none;
 }
 
 .thumb li {
@@ -48,7 +57,9 @@
 }
 
 .nav-bar {
-  position: absolute;
+  position: fixed;
+  background: #0062be;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -60,6 +71,7 @@
 
 .menu {
   width: 75%;
+  min-width: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +94,7 @@
   width: 300px;
   min-width: 280px;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .my-account .item {
@@ -94,6 +106,16 @@
   font-size: 20px;
 }
 
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #0062be;
+  margin: 10px 10px;
+}
+
 .my-account .cart-item {
   background: red;
   font-size: 12px;
@@ -103,23 +125,23 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-left: 20px;
+  margin-left: 10px;
   position: relative;
 }
 
 .cart-item::before {
   content: "";
-  width: 20px;
-  height: 1px;
+  width: 15px;
+  height: 2.5px;
   background-color: red;
   position: absolute;
   top: 50%;
-  left: calc(-100% - 5px);
+  right: 20px;
   transform: translateY(-50%);
 }
 
 .menu-bar {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -132,17 +154,9 @@
   width: 32px;
   height: 2.7px;
   border-radius: 2px;
-  background-color: red;
+  background-color: #fff;
   display: inline-block;
   margin-left: auto;
-}
-
-.menu-bar span:nth-child(1) {
-  width: 27px;
-}
-
-.menu-bar span:nth-child(3) {
-  width: 19px;
 }
 
 .nav-bar ul {
@@ -169,13 +183,14 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
 .content .text-box {
   position: relative;
   max-width: 600px;
+  min-width: 300px;
 }
 
 .content .text-box h2 {
@@ -189,6 +204,11 @@
 .content .text-box h2 span {
   font-size: 1.7em;
   color: #93b4d3;
+}
+
+.login-title p {
+  font-style: italic;
+  text-decoration: underline;
 }
 
 .content .text-box p {
@@ -257,4 +277,367 @@
   height: 100%;
   background: #93b4d3;
   clip-path: circle(600px at right 800px);
+}
+
+/* form */
+
+.section-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-title {
+  font-size: 20px;
+  padding-bottom: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+}
+
+.form__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 2.5px solid #fff;
+  font-family: inherit;
+  font-size: 19px;
+  color: #fff;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+
+.form__input:hover {
+  border-color: rgb(67, 130, 133);
+}
+
+.form__input:focus {
+  border-color: rgb(8, 174, 239);
+}
+
+.form__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: #fff;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.form__input:focus ~ .form__label,
+.form__input:not(:placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.4rem;
+  font-size: 0.9rem;
+  left: 0.8rem;
+}
+
+.form__input:not(:-moz-placeholder-shown).form__input:not(:focus) ~ .form__label {
+  top: -0.4rem;
+  font-size: 0.9rem;
+  left: 0.8rem;
+}
+
+.form__input:not(:-ms-input-placeholder).form__input:not(:focus) ~ .form__label {
+  top: -0.4rem;
+  font-size: 0.9rem;
+  left: 0.8rem;
+}
+
+.form2 {
+  position: relative;
+  width: 20rem;
+  height: 3rem;
+  margin-top: 20px;
+}
+
+.form2__input2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 2.5px solid #fff;
+  font-family: inherit;
+  font-size: 19px;
+  color: #fff;
+  outline: none;
+  padding: 1.25rem;
+  background: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.form2__input2:hover {
+  border-color: rgb(67, 130, 133);
+}
+
+.form2__input2:focus {
+  border-color: rgb(8, 174, 239);
+}
+
+.form2__label {
+  position: absolute;
+  left: 1rem;
+  top: 0.8rem;
+  padding: 0 0.5rem;
+  color: #fff;
+  cursor: text;
+  transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms ease-in;
+}
+
+.eye {
+  position: absolute;
+  margin-left: 280px;
+  padding-top: 12px;
+}
+
+.fa {
+  font-size: 20px;
+}
+
+.form2__input2:focus ~ .form2__label,
+.form2__input2:not(:placeholder-shown).form2__input2:not(:focus) ~ .form2__label {
+  top: -0.4rem;
+  font-size: 0.9rem;
+  left: 0.8rem;
+}
+
+.form2__input2:not(:-moz-placeholder-shown).form2__input2:not(:focus) ~ .form2__label {
+  top: -0.4rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.form2__input2:not(:-ms-input-placeholder).form2__input2:not(:focus) ~ .form2__label {
+  top: -0.4rem;
+  font-size: 0.8rem;
+  left: 0.8rem;
+}
+
+.login-btn {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+  padding-top: 20px;
+}
+
+.login-btn button {
+  display: flex;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  height: 40px;
+  padding: 17px 40px;
+  align-items: center;
+  background: #fff;
+}
+
+/* cart */
+
+.cart-section {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.root {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin: 15px;
+  width: 100%;
+}
+
+.sidebar {
+  border-radius: 5px;
+  background: #eee;
+  padding: 15px;
+  text-align: center;
+}
+
+.head {
+  background: #0062be;
+  border-radius: 3px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 20px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 10px 0;
+}
+
+/* cards */
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border: 2px solid #0062be;
+  border-radius: 30px 30px 0 0;
+  padding: 15px;
+  height: 420px;
+}
+
+.image-box-2 {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.images {
+  max-width: 90%;
+  max-height: 150px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bottom {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-button {
+  position: relative;
+  border: none;
+  border-radius: 8px;
+  background: #0062be;
+  padding: 7px 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.cart-button:hover {
+  background-color: #0d2f4f;
+}
+
+/* cart items */
+
+.rowing,
+.row-img {
+  width: 50px;
+  height: 50px;
+}
+
+.color-price {
+  display: flex;
+  padding: 10px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.bottom h4 {
+  color: #0aad0a;
+}
+
+@media only screen and (max-width: 850px) {
+  .root {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav-bar ul {
+    display: none;
+  }
+
+  .item_user {
+    display: none;
+  }
+
+  .menu {
+    width: 70px;
+    min-width: 0;
+  }
+
+  .my-account {
+    min-width: 0;
+  }
+
+  .menu-bar {
+    display: block;
+  }
+
+  .content .img-box {
+    width: auto;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .content .text-box h2 span {
+    color: #fff;
+  }
+
+  .content .text-box {
+    order: 1;
+  }
+
+  .content .img-box {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .root {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .root {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image-des {
+    display: flex;
+  }
+
+  .box {
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .root {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image-des {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cart-button {
+    margin-top: 10px;
+  }
 }
