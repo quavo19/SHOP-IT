@@ -90,12 +90,13 @@ const cartBox = () => {
                 <p>${space}Gib <br> ${comment}</p>
             </div>
             <div class = "color-price">
-                <p style="background:${color[0]}">${color[1]}</p>
-                <h4>Ghc${price}</h4>
+              <p>Color </p>
+              <div style="background: ${color[0]}" class = "color-price"></div>
             </div>
         </div>
       </div>
       <div class = 'bottom'>
+          <h4>Ghc${price}</h4>
           <buttom class = "cart-button" id = "${id}">Add To Cart </button>
       </div>
   </div>`
