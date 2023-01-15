@@ -91,7 +91,7 @@ const cartBox = () => {
             </div>
             <div class = "color-price">
               <p>Color </p>
-              <div style="background: ${color[0]}" class = "color-price"></div>
+              <div style="background: ${color[0]}" class = "color"></div>
             </div>
         </div>
       </div>
