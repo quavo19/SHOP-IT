@@ -495,7 +495,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  box-shadow:-4px -4px 4px 0 #fff, 15px 15px 15px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: -4px -4px 4px 0 #fff, 15px 15px 15px 0 rgba(0, 0, 0, 0.15);
   max-width: 210px;
   padding: 15px;
   border-radius: 20px;
@@ -624,7 +624,7 @@ h2 {
 
   .box {
     height: auto;
-    max-width: fit-content;
+    max-width: 500px;
   }
 }
 
